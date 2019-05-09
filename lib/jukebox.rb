@@ -33,7 +33,7 @@ def play(songs)
   if songs.include?(response)
     puts response
   elsif response.to_i>0
-    puts songs.fetch(response.to_i - 1)
+    puts songs.fetch(response.to_i - 1, "Invalid input, please try again")
   else
     puts "Invalid input, please try again"
   end
