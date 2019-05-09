@@ -32,7 +32,7 @@ def play(songs)
   response = gets.chomp
   if songs.include?(response)
     puts response
-  elsif !songs[response.to_i - 1].nil?
+  elsif response.is_an_int?
     puts songs.fetch(response.to_i - 1)
   else
     puts "Invalid input, please try again"
